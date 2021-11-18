@@ -1,0 +1,115 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Apr  3 11:56:22 2021
+| Host         : LAPTOP-P50T8LO8 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    47 |
+| Unused register locations in slices containing registers |    84 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            2 |
+|      6 |            1 |
+|      8 |            7 |
+|     10 |            5 |
+|    16+ |           32 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             270 |           71 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             852 |          124 |
+| Yes          | No                    | No                     |             494 |          122 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             108 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+-------------------------------------------+----------------------------------------------+------------------+----------------+
+|         Clock Signal        |               Enable Signal               |               Set/Reset Signal               | Slice Load Count | Bel Load Count |
++-----------------------------+-------------------------------------------+----------------------------------------------+------------------+----------------+
+|  gameteam/wave/waves_reg[1] |                                           |                                              |                2 |              4 |
+| ~out2_BUFG                  |                                           |                                              |                2 |              4 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | anode_control/seg[1]_i_1_n_0                 |                2 |              6 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | anode_control/seg[0]_i_1_n_0                 |                1 |              8 |
+|  out2_BUFG                  |                                           | gametwo/pixel_data[14]_i_1__6_n_0            |                1 |              8 |
+|  out2_BUFG                  |                                           | dut2/pixel_data_reg[0]_11                    |                1 |              8 |
+|  out                        |                                           | anode_control/SR[0]                          |                1 |              8 |
+|  out2_BUFG                  | sw_IBUF[8]                                |                                              |                1 |              8 |
+|  out2_BUFG                  | menu/mode[3]_i_1_n_0                      | sw_IBUF[7]                                   |                2 |              8 |
+|  out2_BUFG                  | menu/pixel_data[15]_i_1_n_0               |                                              |                3 |              8 |
+|  GHOSTCLK                   | gameteam/man_col2                         | gameteam/score[4]_i_1_n_0                    |                1 |             10 |
+|  out2_BUFG                  |                                           | gametwo/pixel_data[4]_i_1__9_n_0             |                2 |             10 |
+|  out2_BUFG                  |                                           | gametwo/pixel_data[10]_i_1__10_n_0           |                1 |             10 |
+|  out2_BUFG                  |                                           | custom/pixel_data_reg[15]_0[0]               |                2 |             10 |
+|  CLK100MHZ_IBUF_BUFG        | gametwo/bg/clear                          |                                              |                2 |             10 |
+|  CLK100MHZ_IBUF_BUFG        |                                           |                                              |                6 |             16 |
+|  GHOSTCLK                   |                                           |                                              |                4 |             18 |
+| ~dut1/J_MIC3_Pin4_OBUF      |                                           |                                              |                5 |             24 |
+|  cl/CLK                     |                                           |                                              |                4 |             24 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | cl/CLK                                       |                3 |             24 |
+|  out                        | anode_control/volume0                     |                                              |                3 |             24 |
+|  GHOSTCLK                   | menu/count_reg[31]                        | gameteam/clear                               |                4 |             26 |
+|  out2_BUFG                  | gametwo/bg/pixel_data[15]_i_1__11_n_0     |                                              |               11 |             32 |
+|  out2_BUFG                  | gameteam/getman/pixel_data[15]_i_1__0_n_0 |                                              |               15 |             32 |
+|  out2_BUFG                  |                                           | gameteam/getghost/ghost_data_reg[15]_i_1_n_0 |               10 |             32 |
+|  CLK100MHZ_IBUF_BUFG        | gameone/pixel_data[15]_i_1__8_n_0         |                                              |               11 |             32 |
+|  out                        |                                           |                                              |                8 |             32 |
+| ~out2_BUFG                  |                                           | dut2/frame_counter[16]_i_1_n_0               |                4 |             32 |
+| ~out2_BUFG                  | dut2/delay[0]_i_1_n_0                     |                                              |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | gametwo/bg/clear                             |                7 |             52 |
+|  out2_BUFG                  | gameteam/score_track1/E[0]                |                                              |               15 |             52 |
+|  out                        |                                           | anode_control/COUNT[26]_i_1_n_0              |                7 |             52 |
+|  out2_BUFG                  | normal/pos_count0                         |                                              |                7 |             52 |
+|  out2_BUFG                  | custom/pos_count[0]_i_1__0_n_0            |                                              |                7 |             52 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | anode_control/COUNT1[26]_i_1_n_0             |                8 |             54 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | anode_control/cl/clear                       |                8 |             64 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | cl2/clear                                    |                8 |             64 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | cl/COUNT[0]_i_1__4_n_0                       |                8 |             64 |
+|  GHOSTCLK                   | menu/E[0]                                 | menu/count_reg[31]                           |                8 |             64 |
+|  out2_BUFG                  |                                           | gameteam/wave/COUNT[0]_i_1__0_n_0            |                8 |             64 |
+|  out2_BUFG                  |                                           | gameteam/clkghost/COUNT[0]_i_1_n_0           |                8 |             64 |
+|  out2_BUFG                  |                                           | gameteam/getman/frame_count[31]_i_1_n_0      |                9 |             64 |
+|  CLK100MHZ_IBUF_BUFG        |                                           | gameone/COUNT[31]_i_1_n_0                    |                9 |             64 |
+| ~out2_BUFG                  | dut2/FSM_onehot_state[31]_i_1_n_0         |                                              |                8 |             64 |
+|  out2_BUFG                  | menu/E[0]                                 |                                              |               34 |             88 |
+| ~out2_BUFG                  |                                           | dut2/spi_word[39]_i_1_n_0                    |               16 |             90 |
+|  out2_BUFG                  |                                           |                                              |               40 |            148 |
++-----------------------------+-------------------------------------------+----------------------------------------------+------------------+----------------+
+
+
